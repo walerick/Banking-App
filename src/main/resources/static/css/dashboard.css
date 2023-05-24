@@ -1,0 +1,136 @@
+/* RESET */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "CW BR Firma";
+}
+html{
+
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+img, video, svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+/* End of Reset */
+
+header {
+    display: flex;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    top: 0;
+    left: 0;
+    z-index: +10;
+    width: 100%;
+    font-weight: 500;
+}
+
+nav{
+    display: flex;
+    gap: 1rem;
+}
+
+nav li a {
+    color: #0066f5;
+}
+
+/* Styles for aside */
+aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    padding: 1rem;
+    padding-left: 4rem;
+    padding-top: 6rem;
+    background-color: #f8f8f8;
+}
+
+aside h2 {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+
+}
+aside h3{
+    font-size: larger;
+
+}
+aside ul {
+    margin-bottom: 1rem;
+}
+
+aside li {
+    margin-bottom: 2rem;
+}
+
+/* Styles for main */
+main {
+    margin-left: 25%;
+    padding: 1rem;
+}
+
+.account-balance{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 60%;
+}
+
+main .dropdown {
+    position: absolute;
+    scale: 0;
+    right: 0;
+    padding: 3rem;
+    max-width: 30%;
+    background-color:#f8f8f8;
+}
+
+
+input {
+  /* width: 60%; */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  /* border: none; */
+  font-size: 16px;
+  background-color: #F5F7FA;
+}
+
+.deposit-dropdown p {
+    margin-bottom: 3rem;
+}
+
+button{
+    background-color: #4a90e2;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #1e87f0;
+  }

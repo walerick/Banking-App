@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link th:href="@{../css/dashboard.css}" href="../css/dashboard.css" rel="stylesheet" type="text/css" >
+</head>
+<body>
+
+<!--HEADER-->
+<div th:insert="~{fragments/header.html :: header}"></div>
+<!--END OF HEADER-->
+
+<aside>
+    <li>
+        <h3>Home</h3>
+    </li>
+    <li>
+        <h3 class="deposit-toggle">Deposit</h3>
+    </li>
+    <li>
+        <h3 class="transfer-toggle">Transfer</h3>
+    </li>
+    <li>
+        <h3 class="withdraw-toggle">Withdraw</h3>
+    </li>
+    <li>
+        <a href="/logout"><button>Log Out</button></a>
+    </li>
+</aside>
+
+<main>
+    <div class="account-balance">
+        <h2>Account Balance</h2>
+        <h2 class="account-fig" th:if="${totalBalance != null}">
+            <span th:text="${totalBalance}"></span>
+        </h2>
+    </div>
+
+    <!-- DEPOSIT DROPDOWN -->
+    <div class="dropdown deposit-dropdown">
+        <h2>Quick Save</h2>
+        <p>Enter an amount to save</p>
+        <form class="save-form">
+            <label for="save">Tap here and enter</label>
+            <input type="number" name="save" class="save">
+            <button class="proceed">proceed</button>
+        </form>
+    </div>
+
+    <!-- TRANSFER DROPDOWN -->
+    <div class="dropdown transfer-dropdown">
+        <form  class="transfer-form">
+            <h2>Transfer</h2>
+            <label for="transfer">Tap here and enter</label>
+            <input type="text" name="account-no" class="account-no">
+            <br>
+            <label for="account">Account Number</label>
+            <input type="number" name="amount-no" class="amount-no">
+            <button class="proceed">proceed</button>
+        </form>
+    </div>
+
+
+    <!-- WITHDRAW-DROPDOWN -->
+    <div class="dropdown withdraw-dropdown">
+        <h2>Quick Withdrawal</h2>
+        <p>Enter an amount to withdraw</p>
+        <form class="withdraw-form">
+            <label for="withdraw">Tap here and enter</label>
+            <input type="number" name="withdraw" class="withdraw">
+            <button class="proceed">proceed</button>
+        </form>
+    </div>
+<!--    testing
+    <c:choose>
+        <c:when>
+        </c:when>
+        <c:otherwise>
+        </c:otherwise>
+    </c:choose>
+
+-->
+</main>
+<script type="text/javascript" th:src="@{../js/dashboard.js}"></script>
+</body>
+</html>
